@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox
 DEBUG = True
 
 ALLOWED_HOSTS = ['resume-app-3.onrender.com']
-
+# Use the environment variable 'PORT' to determine the port to bind to
+PORT = os.environ.get('PORT', '8000')
 
 # Application definition
 
