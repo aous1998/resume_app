@@ -1,6 +1,5 @@
 # Specify the compatible Python version
 python==3.10
-
 arch==7.0.0
 asgiref==3.8.1
 asttokens==2.4.1
