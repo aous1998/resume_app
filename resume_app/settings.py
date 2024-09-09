@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://resume-app-pgqw.onrender.com']
+ALLOWED_HOSTS = ['resume-app-pgqw.onrender.com']
 # Use the environment variable 'PORT' to determine the port to bind to
 PORT = os.environ.get('PORT', '8000')
 
