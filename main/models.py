@@ -144,6 +144,8 @@ class Blog(models.Model):
         return f"/blog/{self.slug}"
 
 
+from django.db import models
+
 class Certificate(models.Model):
 
     class Meta:
@@ -155,6 +157,8 @@ class Certificate(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+    link = models.URLField(max_length=200, blank=True, null=True)  # New field for storing the certificate link
+
 
     def __str__(self):
         return self.name

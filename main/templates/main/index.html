@@ -111,7 +111,6 @@ Start Content
     </div>
   </div>
 </section>
-
 <section>
   <div class="sectionSpaceSm lightBg">
     <div class="container">
@@ -127,14 +126,13 @@ Start Content
             {% if c.is_active %}
             <div class="swiper-slide">
               <div class="cardStyle1">
-                <h4 class="mdTitle cs1Title">
-                  <a href="javascript:void(0)">{{ c.title }}</a>
-                </h4>
+                <h4 class="mdTitle cs1Title">{{ c.title }}</h4>
                 <ul class="cardOptionCol">
                   <li>{{ c.date.date }}</li>
                   <li>{{ c.name|title }}</li>
                 </ul>
                 <p>{{ c.description }}</p>
+                <a href="{{ c.link }}" target="_blank" class="simpleLink">View in {{ c.name|title }}</a>
               </div>
             </div>
             {% endif %}
@@ -148,6 +146,7 @@ Start Content
     </div>
   </div>
 </section>
+
 
 <section>
   <div class="sectionSpace">
