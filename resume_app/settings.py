@@ -9,12 +9,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox'
+# Set the SECRET_KEY environment variable in production (e.g. in the Render dashboard).
+# This fallback is only for local development and must never be used in production.
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY', 'django-insecure-local-dev-key-do-not-use-in-production'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['resume-app-pgqw.onrender.com']
+ALLOWED_HOSTS = ['resume-app-pgqw.onrender.com', 'localhost', '127.0.0.1']
 # Use the environment variable 'PORT' to determine the port to bind to
 PORT = os.environ.get('PORT', '8000')
 
